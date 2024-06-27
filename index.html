@@ -90,3 +90,25 @@
     </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bing Search</title>
+</head>
+<body>
+    <div class="topnav">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchBing()">Search</button>
+    </div>
+    <div id="searchResults"></div>
+
+    <script>
+        function searchBing() {
+            const query = document.getElementById('searchInput').value;
+            window.location.href = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+        }
+    </script>
+</body>
+</html>
